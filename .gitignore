@@ -32,6 +32,14 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# Import data contains prices and stock; keep it local and outside the public folder
+/data/
+/public/*.csv
+/public/env.example
+/public/setup.sql
+/public/gerar.py
 
 # vercel
 .vercel

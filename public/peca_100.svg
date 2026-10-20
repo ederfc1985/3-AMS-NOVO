@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f3f5"/><stop offset="0.5" stop-color="#b6bcc3"/><stop offset="1" stop-color="#7d848c"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#fffbe0"/><stop offset="0.6" stop-color="#ffe98a"/><stop offset="1" stop-color="#d9a400"/></radialGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7e6f2"/><stop offset="1" stop-color="#6f8da5"/></linearGradient>
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<ellipse cx="400" cy="655" rx="250" ry="22" fill="#000" opacity="0.12"/>
+<polygon points="613.8,357.3 661.6,364.9 661.6,395.1 613.8,402.7 608.7,431.8 650.9,455.3 640.6,483.6 593.2,474.4 578.3,500.1 610.1,536.6 590.7,559.7 549.2,534.8 526.5,553.8 543.8,599.0 517.7,614.1 487.3,576.5 459.4,586.6 460.3,635.0 430.6,640.2 414.8,594.5 385.2,594.5 369.4,640.2 339.7,635.0 340.6,586.6 312.7,576.5 282.3,614.1 256.2,599.0 273.5,553.8 250.8,534.8 209.3,559.7 189.9,536.6 221.7,500.1 206.8,474.4 159.4,483.6 149.1,455.3 191.3,431.8 186.2,402.7 138.4,395.1 138.4,364.9 186.2,357.3 191.3,328.2 149.1,304.7 159.4,276.4 206.8,285.6 221.7,259.9 189.9,223.4 209.3,200.3 250.8,225.2 273.5,206.2 256.2,161.0 282.3,145.9 312.7,183.5 340.6,173.4 339.7,125.0 369.4,119.8 385.2,165.5 414.8,165.5 430.6,119.8 460.3,125.0 459.4,173.4 487.3,183.5 517.7,145.9 543.8,161.0 526.5,206.2 549.2,225.2 590.7,200.3 610.1,223.4 578.3,259.9 593.2,285.6 640.6,276.4 650.9,304.7 608.7,328.2" fill="url(#metal)" stroke="#6b727a" stroke-width="3"/>
+<circle cx="400" cy="380" r="190" fill="none" stroke="#1d6fd8" stroke-width="8"/>
+<circle cx="400" cy="380" r="175" fill="#c9ced3"/><circle cx="525.0" cy="380.0" r="30" fill="#e6e9ec"/><circle cx="462.5" cy="488.3" r="30" fill="#e6e9ec"/><circle cx="337.5" cy="488.3" r="30" fill="#e6e9ec"/><circle cx="275.0" cy="380.0" r="30" fill="#e6e9ec"/><circle cx="337.5" cy="271.7" r="30" fill="#e6e9ec"/><circle cx="462.5" cy="271.7" r="30" fill="#e6e9ec"/>
+<circle cx="400" cy="380" r="62" fill="url(#metal)"/><circle cx="400" cy="380" r="24" fill="#2b2f33"/>
+<text x="400" y="725" font-size="38" font-weight="700" fill="#22262a" text-anchor="middle" font-family="DejaVu Sans, Arial">Engrenagem do Comando</text>
+<text x="400" y="765" font-size="24" fill="#6a727a" text-anchor="middle" font-family="DejaVu Sans, Arial">TurboPro · PCA-092</text>
+</svg>

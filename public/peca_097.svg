@@ -1,0 +1,26 @@
+// Uso: node upload.mjs
+// Requer: npm i @supabase/supabase-js csv-parse dotenv
+import "dotenv/config";
+import fs from "node:fs";
+import { createClient } from "@supabase/supabase-js";
+import { parse } from "csv-parse/sync";
+
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+const BUCKET = "pecas";
+
+const linhas = parse(fs.readFileSync("pecas.csv"), { columns: true, skip_empty_lines: true });
+
+for (const l of linhas) {
+  const arquivo = fs.readFileSync(`imagens/${l.imagem}`);
+  const { error: upErr } = await supabase.storage
+    .from(BUCKET)
+    .upload(l.imagem, arquivo, { contentType: "image/png", upsert: true });
+  if (upErr) { console.error("Falha no upload", l.imagem, upErr.message); continue; }
+
+  const { data } = supabase.storage.from(BUCKET).getPublicUrl(l.imagem);
+  const { error: dbErr } = await supabase.from("pecas").upsert({
+    sku: l.sku, nome: l.nome, categoria: l.categoria, marca: l.marca,
+    preco: Number(l.preco), estoque: Number(l.estoque), imagem_url: data.publicUrl,
+  }, { onConflict: "sku" });
+  console.log(dbErr ? `Erro tabela ${l.sku}: ${dbErr.message}` : `OK ${l.sku}`);
+}

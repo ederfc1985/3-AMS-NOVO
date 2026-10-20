@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f3f5"/><stop offset="0.5" stop-color="#b6bcc3"/><stop offset="1" stop-color="#7d848c"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#fffbe0"/><stop offset="0.6" stop-color="#ffe98a"/><stop offset="1" stop-color="#d9a400"/></radialGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7e6f2"/><stop offset="1" stop-color="#6f8da5"/></linearGradient>
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<ellipse cx="400" cy="655" rx="250" ry="22" fill="#000" opacity="0.12"/>
+<circle cx="400" cy="380" r="262" fill="#141414"/>
+<circle cx="400" cy="380" r="240" fill="none" stroke="#2e2e2e" stroke-width="36" stroke-dasharray="22 14"/>
+<circle cx="400" cy="380" r="185" fill="#262626"/>
+<circle cx="400" cy="380" r="150" fill="url(#metal)"/>
+<circle cx="400" cy="380" r="150" fill="none" stroke="#e63946" stroke-width="10"/>
+<circle cx="400" cy="380" r="105" fill="#2b2f33"/><line x1="400" y1="380" x2="400.0" y2="245.0" stroke="#c4c9ce" stroke-width="30" stroke-linecap="round"/><line x1="400" y1="380" x2="528.4" y2="338.3" stroke="#c4c9ce" stroke-width="30" stroke-linecap="round"/><line x1="400" y1="380" x2="479.4" y2="489.2" stroke="#c4c9ce" stroke-width="30" stroke-linecap="round"/><line x1="400" y1="380" x2="320.6" y2="489.2" stroke="#c4c9ce" stroke-width="30" stroke-linecap="round"/><line x1="400" y1="380" x2="271.6" y2="338.3" stroke="#c4c9ce" stroke-width="30" stroke-linecap="round"/>
+<circle cx="400" cy="380" r="38" fill="#e63946"/><circle cx="400" cy="380" r="14" fill="#222"/>
+<text x="400" y="725" font-size="38" font-weight="700" fill="#22262a" text-anchor="middle" font-family="DejaVu Sans, Arial">Pneu</text>
+<text x="400" y="765" font-size="24" fill="#6a727a" text-anchor="middle" font-family="DejaVu Sans, Arial">AutoMax · PCA-001</text>
+</svg>
