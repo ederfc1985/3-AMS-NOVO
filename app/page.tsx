@@ -879,17 +879,6 @@ export default function Home() {
               <span aria-hidden="true">↓</span>
             </a>
           </div>
-          <div className="hero-artwork" aria-hidden="true">
-            <Image
-              alt=""
-              className="hero-car-image"
-              src="/catalogo-hero.png"
-              width={1440}
-              height={900}
-              priority
-            />
-            <span className="hero-artwork-index">AMS / 01</span>
-          </div>
           <div className="hero-bottomline">
             <span>AMS AUTOPEÇAS</span>
             <span className="hero-bottomline-rule" />

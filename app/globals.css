@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f4f0;
-  --foreground: #181b20;
-  --muted: #777a80;
-  --border: #e2e0da;
-  --accent: #f5cc00;
-  --accent-dark: #d9b400;
-  --lotus-blue: #123f7a;
-  --lotus-blue-dark: #0b315f;
+  --background: #f3f1ec;
+  --foreground: #191917;
+  --muted: #76736e;
+  --border: #dedbd3;
+  --accent: #c7a45d;
+  --accent-dark: #9a7736;
+  --graphite: #292825;
+  --graphite-dark: #151514;
 }
 
 @theme inline {
@@ -126,7 +126,7 @@ button:disabled {
 
 .admin-login-button {
   min-height: 35px;
-  border: 1px solid var(--lotus-blue);
+  border: 1px solid var(--graphite);
   border-radius: 2px;
   background: var(--accent);
   color: #111315;
@@ -175,7 +175,7 @@ button:disabled {
 
 .page-heading h1 {
   margin: 0;
-  color: var(--lotus-blue);
+  color: var(--graphite);
   font-size: clamp(27px, 3vw, 35px);
   letter-spacing: -0.045em;
 }
@@ -309,7 +309,7 @@ button:disabled {
 
 .form-section-title {
   margin-bottom: 12px;
-  color: var(--lotus-blue);
+  color: var(--graphite);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -331,7 +331,7 @@ button:disabled {
   min-width: 0;
   flex-direction: column;
   gap: 6px;
-  color: #525c68;
+  color: #625e57;
   font-size: 11px;
   font-weight: 600;
 }
@@ -341,17 +341,17 @@ button:disabled {
 }
 
 .required-mark {
-  color: #9a7600;
+  color: var(--accent-dark);
 }
 
 .form-input {
   width: 100%;
   min-height: 39px;
-  border: 1px solid #e2e5e9;
+  border: 1px solid var(--border);
   border-radius: 7px;
   outline: none;
   background: #fff;
-  color: #29313c;
+  color: #242320;
   font-size: 12px;
   font-weight: 400;
   padding: 9px 10px;
@@ -363,8 +363,8 @@ button:disabled {
 }
 
 .form-input:focus {
-  border-color: var(--lotus-blue);
-  box-shadow: 0 0 0 3px rgb(18 63 122 / 11%);
+  border-color: var(--accent-dark);
+  box-shadow: 0 0 0 3px rgb(199 164 93 / 18%);
 }
 
 .form-textarea {
@@ -386,7 +386,7 @@ button:disabled {
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: #f7f8fa;
+  background: #f3f1ec;
   object-fit: cover;
 }
 
@@ -432,32 +432,32 @@ button:disabled {
 }
 
 .button-primary {
-  background: var(--lotus-blue);
+  background: var(--graphite);
   color: var(--accent);
 }
 
 .button-primary:hover:not(:disabled) {
-  background: var(--lotus-blue-dark);
+  background: var(--graphite-dark);
 }
 
 .button-secondary {
-  border-color: #e2e5e9;
+  border-color: var(--border);
   background: #fff;
   color: #5f6873;
 }
 
 .button-secondary:hover:not(:disabled) {
-  border-color: #c7ccd3;
-  background: #f8f9fa;
+  border-color: var(--accent-dark);
+  background: #f7f4ed;
 }
 
 .button-quiet {
   background: transparent;
-  color: #737c87;
+  color: #625e57;
 }
 
 .button-quiet:hover {
-  background: #f3f4f6;
+  background: #f3f1ec;
 }
 
 .catalog-hero {
@@ -469,8 +469,8 @@ button:disabled {
   overflow: hidden;
   margin-left: 0;
   background:
-    radial-gradient(ellipse at 82% 49%, rgb(31 50 64 / 65%), transparent 39%),
-    linear-gradient(112deg, #101316 0%, #14191d 51%, #1b242b 100%);
+    radial-gradient(ellipse at 83% 50%, rgb(199 164 93 / 12%), transparent 40%),
+    linear-gradient(112deg, #111110 0%, #1b1a18 59%, #292723 100%);
   color: #fff;
   padding: 72px clamp(30px, 9.6vw, 150px) 112px;
 }
@@ -478,7 +478,7 @@ button:disabled {
 .catalog-hero-copy {
   position: relative;
   z-index: 2;
-  max-width: 690px;
+  max-width: min(76%, 900px);
 }
 
 .hero-eyebrow {
@@ -500,7 +500,7 @@ button:disabled {
 }
 
 .catalog-hero h1 {
-  max-width: 670px;
+  max-width: 850px;
   margin: 0;
   font-size: clamp(44px, 6vw, 78px);
   font-weight: 500;
@@ -557,44 +557,22 @@ button:disabled {
   color: var(--accent);
 }
 
-.hero-artwork {
+.catalog-hero::after {
   position: absolute;
-  z-index: 1;
-  overflow: hidden;
-  inset: 0;
-}
-
-.hero-car-image {
-  position: absolute;
-  top: 0;
-  right: -3%;
-  width: min(82vw, 1250px);
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.95;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgb(0 0 0 / 25%) 24%,
-    #000 53%
+  top: 12%;
+  right: clamp(30px, 7vw, 100px);
+  width: min(40vw, 600px);
+  height: 76%;
+  border-right: 1px solid rgb(199 164 93 / 18%);
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0 34px,
+    rgb(199 164 93 / 6%) 35px 36px
   );
-  mask-image: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgb(0 0 0 / 25%) 24%,
-    #000 53%
-  );
-}
-
-.hero-artwork-index {
-  position: absolute;
-  right: clamp(32px, 6vw, 92px);
-  bottom: 82px;
-  color: rgb(255 255 255 / 58%);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
-  letter-spacing: 0.14em;
+  clip-path: polygon(18% 0, 100% 0, 82% 100%, 0 100%);
+  content: "";
+  mask-image: linear-gradient(90deg, transparent, #000 35%, #000);
+  pointer-events: none;
 }
 
 .hero-bottomline {
@@ -662,13 +640,13 @@ button:disabled {
 .catalog-create-button {
   min-height: 39px;
   gap: 7px;
-  background: var(--lotus-blue);
+  background: var(--graphite);
   color: #fff;
   font-size: 11px;
 }
 
 .catalog-create-button:hover:not(:disabled) {
-  background: var(--lotus-blue-dark);
+  background: var(--graphite-dark);
 }
 
 .catalog-create-button > span {
@@ -731,7 +709,7 @@ button:disabled {
 }
 
 .marketplace-search-button:hover:not(:disabled) {
-  background: #e9c000;
+  background: var(--accent);
 }
 
 .marketplace-search-button svg {
@@ -776,7 +754,7 @@ button:disabled {
 }
 
 .category-chip.is-active {
-  border-bottom-color: var(--lotus-blue);
+  border-bottom-color: var(--accent);
   background: transparent;
   color: #111315;
 }
@@ -785,7 +763,7 @@ button:disabled {
   border: 1px solid #e7ebf0;
   border-radius: 99px;
   background: #f7f8fa;
-  color: #677382;
+  color: #706a60;
   font-size: 11px;
   font-weight: 700;
   padding: 8px 12px;
@@ -818,7 +796,7 @@ button:disabled {
   aspect-ratio: 1 / 0.9;
   overflow: hidden;
   place-items: center;
-  background: #efeee9;
+  background: #ede9df;
   padding: 10px;
 }
 
@@ -874,7 +852,7 @@ button:disabled {
   align-items: center;
   flex-direction: column;
   gap: 9px;
-  color: #a2adba;
+  color: #8d887e;
 }
 
 .part-image-placeholder svg {
@@ -888,7 +866,7 @@ button:disabled {
 }
 
 .part-image-placeholder span {
-  color: #8793a1;
+  color: #777168;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -907,25 +885,25 @@ button:disabled {
 
 .catalog-edit-button {
   flex: 0 0 auto;
-  border: 1px solid #dce3ec;
+  border: 1px solid var(--border);
   border-radius: 1px;
   background: #fff;
-  color: var(--lotus-blue);
+  color: var(--graphite);
   font-size: 9px;
   font-weight: 700;
   padding: 6px 8px;
 }
 
 .catalog-edit-button:hover {
-  border-color: var(--lotus-blue);
-  background: #f4f7fb;
+  border-color: var(--accent-dark);
+  background: #f7f4ed;
 }
 
 .catalog-card h3 {
   display: -webkit-box;
   overflow: hidden;
   margin: 0;
-  color: #1b1d20;
+  color: var(--foreground);
   font-size: 14px;
   font-weight: 550;
   line-height: 1.45;
@@ -938,7 +916,7 @@ button:disabled {
   align-items: flex-start;
   gap: 6px;
   margin: 9px 0 0;
-  color: #737e8b;
+  color: var(--muted);
   font-size: 10px;
   font-weight: 500;
   line-height: 1.5;
@@ -949,7 +927,7 @@ button:disabled {
   height: 16px;
   flex: 0 0 16px;
   fill: none;
-  stroke: var(--lotus-blue);
+  stroke: var(--accent-dark);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.4;
@@ -960,7 +938,7 @@ button:disabled {
   display: -webkit-box;
   overflow: hidden;
   margin: 8px 0 0;
-  color: #818a95;
+  color: #77736b;
   font-size: 11px;
   line-height: 1.55;
   -webkit-box-orient: vertical;
@@ -980,7 +958,7 @@ button:disabled {
 }
 
 .catalog-card-footer span:first-child {
-  color: #687484;
+  color: #645e53;
   font-family: var(--font-geist-mono), monospace;
   font-weight: 600;
 }
@@ -1036,7 +1014,7 @@ button:disabled {
 
 .admin-login-description {
   margin: 0 0 20px;
-  color: #707a87;
+  color: #706a60;
   font-size: 12px;
   line-height: 1.6;
 }
@@ -1213,14 +1191,14 @@ button:disabled {
 .text-action {
   border: 0;
   background: transparent;
-  color: #566a82;
+  color: #6c6250;
   font-size: 10px;
   font-weight: 700;
   padding: 4px 0;
 }
 
 .text-action:hover {
-  color: #293e57;
+  color: var(--graphite-dark);
   text-decoration: underline;
 }
 
@@ -1326,13 +1304,12 @@ button:disabled {
   }
 
   .catalog-hero h1 {
-    max-width: 610px;
+    max-width: 800px;
     font-size: clamp(52px, 6.5vw, 72px);
   }
 
-  .hero-car-image {
-    right: -10%;
-    width: 91vw;
+  .catalog-hero-copy {
+    max-width: 78%;
   }
 
   .hero-bottomline {
@@ -1367,12 +1344,7 @@ button:disabled {
   }
 
   .catalog-hero-copy {
-    max-width: 590px;
-  }
-
-  .hero-car-image {
-    right: -17%;
-    width: 112vw;
+    max-width: 100%;
   }
 
   .hero-bottomline {
@@ -1464,35 +1436,6 @@ button:disabled {
     gap: 16px;
     margin-top: 21px;
     padding-left: 13px;
-  }
-
-  .hero-car-image {
-    top: auto;
-    right: -22%;
-    bottom: 12px;
-    width: 145%;
-    height: 48%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.72;
-    -webkit-mask-image: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgb(0 0 0 / 45%) 15%,
-      #000 44%
-    );
-    mask-image: linear-gradient(
-      180deg,
-      transparent 0%,
-      rgb(0 0 0 / 45%) 15%,
-      #000 44%
-    );
-  }
-
-  .hero-artwork-index {
-    right: 23px;
-    bottom: 74px;
-    font-size: 8px;
   }
 
   .hero-bottomline {
